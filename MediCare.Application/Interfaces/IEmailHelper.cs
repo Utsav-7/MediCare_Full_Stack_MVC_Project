@@ -15,7 +15,8 @@ namespace MediCare_MVC_Project.MediCare.Application.Interfaces
         public Task SendPatientRegistrationEmailAsync(GetPatientDTO patient);
         public Task SendAppointmentStatusEmailAsync(string patientEmail, string doctorName, Appointment appointment);
         public Task SendAppointmentReminderEmailAsync(string patientEmail, string doctorName, GetAppointmentDTO appointment);
-
         public Task SendPatientNotesEmailAsync(string patientEmail, PdfNoteDTO pdfNotesDTO, byte[] PdfBytes);
+        public Task SendPatientInvoiceEmailAsync(string patientEmail, PdfNoteDTO pdfNotesDTO, byte[] PdfBytes);
+
     }
 }

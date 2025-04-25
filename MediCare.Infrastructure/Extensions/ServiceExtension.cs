@@ -2,6 +2,7 @@
 using MediCare_MVC_Project.MediCare.Application.Interfaces.AdmissionManagement;
 using MediCare_MVC_Project.MediCare.Application.Interfaces.AppointmentManagement;
 using MediCare_MVC_Project.MediCare.Application.Interfaces.Authentication;
+using MediCare_MVC_Project.MediCare.Application.Interfaces.BillingManagement;
 using MediCare_MVC_Project.MediCare.Application.Interfaces.CheckUpListManagement;
 using MediCare_MVC_Project.MediCare.Application.Interfaces.DashboardManagement;
 using MediCare_MVC_Project.MediCare.Application.Interfaces.DoctorManagement;
@@ -35,6 +36,7 @@ namespace MediCare_MVC_Project.MediCare.Infrastructure.Extensions
             services.AddScoped<IRoomRepository, RoomRepository>();
             services.AddScoped<ISpecializationRepository, SpecializationRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IBillingRepository, BillingRepository>();
             services.AddScoped<IReceptionistDashboardRepository, ReceptionistDashboardRepository>();
             services.AddScoped<IDoctorDashboardRepository, DoctorDashboardRepository>();
             services.AddScoped<IAdminDashboardRepository, AdminDashboardRepository>();
@@ -59,6 +61,7 @@ namespace MediCare_MVC_Project.MediCare.Infrastructure.Extensions
             services.AddScoped<IRoomService, RoomService>();
             services.AddScoped<ISpecializationService, SpecializationService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IBillingService, BillingService>();
             services.AddScoped<IAdminDashboardService, AdminDashboardService>();
             services.AddScoped<IDoctorDashboardService, DoctorDashboardService>();
             services.AddScoped<IReceptionistDashboardService, ReceptionistDashboardService>();
